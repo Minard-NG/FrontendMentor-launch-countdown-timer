@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Red Hat";
+  src: url("/font/red-hat/RedHatDisplay-Black.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Red Hat";
+  src: url("/font/red-hat/RedHatDisplay-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
+  font-size: 16px;
+}
+
+.grid {
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(235, 16%, 14%) 20%,
+    hsl(295, 18%, 12%)
+  );
+  position: relative;
+  display: grid;
+  grid-template: 0.3fr minmax(6.25rem, 0.2fr) 0.5fr / 1fr;
+}
+.grid:before {
+  content: "";
+  width: 100vw;
+  height: 72vh;
+  display: inline-block;
+  z-index: 1;
+  background-image: url("/images/bg-stars.svg");
+  position: absolute;
+  top: 0;
+  background-position: -20% -361%;
+}
+.grid:after {
+  content: "";
+  width: 100vw;
+  height: 28vh;
+  z-index: 0;
+  display: inline-block;
+  background-image: url("/images/pattern-hills.svg");
+  background-position: 89.5% 0%;
+  background-size: 250% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+}
+
+header,
+footer {
+  z-index: 2;
+  display: flex;
+}
+header {
+  justify-content: center;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.25rem;
+  font-family: "Red Hat";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  padding: 45px;
+  text-align: center;
+}
+
+main {
+  z-index: 2;
+  display: grid;
+  grid-template: 3fr 1fr / repeat(4, 72px);
+  justify-content: center;
+  align-items: end;
+  gap: 0.9375rem;
+  /* padding: 0rem 1.25rem; */
+}
+.timer_card {
+  width: 72px;
+  height: 72px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 1px hsl(234, 17%, 12%);
+  position: relative;
+}
+.upper,
+.lower {
+  height: 50%;
+  width: 100%;
+  background-color: hsl(236, 21%, 26%);
+}
+.upper {
+  opacity: 0.5;
+  border-bottom: 0.005px solid hsl(234, 17%, 12%);
+  border-radius: 5px 5px 0px 0px;
+}
+.upper::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: hsl(235, 16%, 14%);
+  border-radius: 50%;
+  position: absolute;
+  top: 46%;
+  left: -2%;
+}
+.upper::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: hsl(235, 16%, 14%);
+  border-radius: 50%;
+  position: absolute;
+  top: 46%;
+  right: -2%;
+  z-index: 99;
+}
+
+.lower {
+  opacity: 1;
+  border-radius: 2.5px 2.5px 5px 5px;
+  z-index: 0;
+}
+.timer_text {
+  position: absolute;
+  font-size: 1.875rem;
+  font-family: "Red Hat";
+  letter-spacing: 0.0625rem;
+  color: hsl(345, 95%, 68%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+main p {
+  align-self: start;
+  justify-self: center;
+  color: hsl(237, 18%, 59%);
+  font-family: "Red Hat";
+  font-size: 0.5rem;
+  font-weight: normal;
+  letter-spacing: 0.25rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 44px;
+}
+
+footer img {
+  width: 1.875rem;
+  height: 1.875rem;
+  transition: all 200ms ease-in;
+}
+footer a:nth-child(2) {
+  margin: 0 30px;
+}
+footer img:hover {
+  cursor: pointer;
+  filter: invert(58%) sepia(64%) saturate(3293%) hue-rotate(310deg)
+    brightness(101%) contrast(97%);
+}
+
+@media screen and (min-width: 768px) {
+  .grid:after {
+    background-size: 120% 100%;
+  }
+
+  header {
+    letter-spacing: 8px;
+    word-spacing: 18px;
+    font-size: 1.5rem;
+  }
+  main {
+    grid-template: 3fr 1fr / repeat(4, 9.375rem);
+    gap: 1.875rem;
+  }
+  .timer_card {
+    width: 9.375rem;
+    height: 9.375rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 2px hsl(234, 17%, 12%);
+  }
+  .upper {
+    border-radius: 10px 10px 0px 0px;
+  }
+  .upper::before,
+  .upper::after {
+    width: 10px;
+    height: 10px;
+  }
+  .lower {
+    border-radius: 5.5px 5.5px 10px 10px;
+  }
+  .timer_text{
+    font-size: 3.75rem;
+  }
+
+  main > p {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .grid:after {
+    background-size: 100% 100%;
+  }
+}
