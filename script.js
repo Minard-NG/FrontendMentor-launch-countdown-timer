@@ -1,4 +1,4 @@
-const  deadline = '2021-12-13';
+const  deadline = '2021-12-25';
 
 let daySpan = document.getElementById('day');
 let hourSpan = document.getElementById('hour');
