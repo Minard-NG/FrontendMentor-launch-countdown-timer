@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Minard-NG/FrontendMentor-launch-countdown-timer/blob/main/index.html)
-- Live Site URL: [Add live site URL here](https://xmaslaunch.netlify.app/)
+- Solution URL: [Github](https://github.com/Minard-NG/FrontendMentor-launch-countdown-timer/blob/main/index.html)
+- Live Site URL: [Hosted with Netlify](https://xmaslaunch.netlify.app/)
 
 ## My process
 
