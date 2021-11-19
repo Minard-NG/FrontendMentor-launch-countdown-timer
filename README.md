@@ -1,4 +1,4 @@
-# Frontend Mentor - Launch countdown timer
+# Frontend Mentor - Launch countdown timer - Design Preview
 
 ![Design preview for the Launch countdown timer coding challenge](./design/desktop-preview.jpg)
 
@@ -27,32 +27,28 @@ This is a solution to the [Launch countdown timer challenge on Frontend Mentor](
 Users should be able to:
 
 - See hover states for all interactive elements on the page
-- See a live countdown timer that ticks down every second (start the count at 14 days)
+- See a live countdown timer that ticks down every second (do a count till christmas day, my tweak though, cause you know christmas is here)
 - **Bonus**: When a number changes, make the card flip from the middle
 
-### Screenshot
+### Screenshot of my implementation
 
 ![Screenshots](./images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Minard-NG/FrontendMentor-launch-countdown-timer/blob/main/index.html)
+- Live Site URL: [Add live site URL here](https://xmaslaunch.netlify.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS3
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Git and GitHub
 
 ### What I learned
 
