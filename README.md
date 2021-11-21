@@ -87,9 +87,9 @@ Using google fonts to add custom fonts for my web projects has been a defacto fo
 }
 ```
 
-The timer section of the web page was also another key section to implement CSS grid. I used 1 row / 4 columns template and the grid gap property and other alignment properties for the implementation.
+The timer section of the web page was also another key section to implement CSS grid. I used 1 row / 4 columns template and the grid gap property and other alignment properties for the implementation. The header section and footer were good candidates for flexbox.
 
-#### Code snippet for grid:
+#### Code snippet for the timer grid:
 
 ```css
 main {
@@ -101,6 +101,10 @@ main {
   gap: 0.9375rem;
 }
 ```
+
+One key concept I experimented while developing this project was the mobile first approach, where I build for smaller devices and implement media queries to enhance the layout/features as for larger devices. I found it very helpful.
+
+
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
