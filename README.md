@@ -104,7 +104,7 @@ main {
 
 One key concept I experimented while developing this project was the mobile first approach, where I build for smaller devices and implement media queries to enhance the layout/features as for larger devices. I found it very helpful.
 
-The curve on the cards presented an interesting learning opportunity. It caused me to research if the CSS3 had a negative border radius property, which I found it didn't, So I did come up with an interesting work around. I created pseudo-elements for the upper section of each timer card and positioned them relative to the timer cards. Gave them equal width and height plus a border-radius of 50% to make them a circle. Applied a background-color to the pseudo-elements that blends nicely with backgound and then used the top, left, right CSS property to position the circle such that the circle overlaps neatly on the timer card while the other half blends into the background. Also applied a z-index property to give it a nice visual overlapping perspective.
+The curve on the cards presented an interesting learning opportunity. It caused me to research if CSS3 had a negative border radius property, which I found it didn't, so I did come up with an interesting work around. I created pseudo-elements for the upper section of each timer card and positioned them relative to the timer cards. Gave them equal width and height plus a border-radius of 50% to make them a circle. Applied a background-color to the pseudo-elements that blends nicely with backgound and then used the top, left, right CSS property to position the circle such that the circle overlaps neatly on the timer card while the other half blends into the background. Also applied a z-index property to give it a nice visual overlapping perspective.
 
 #### Code snippets
 
@@ -134,55 +134,49 @@ The curve on the cards presented an interesting learning opportunity. It caused 
 }
 ```
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Plugging in the Javascript code for the timer was really exciting. I learnt about JS date and time functions, functional programming and closure. I also learnt this little hack where you can use the slice function to easily implement a leading zero for your timer. 
 
-To see how you can add code snippets, see below:
+#### Code Snippet for showing closure and slice hack
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+```js
+function initializeTime(endTime){
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
+    function updateCounter(){
+        let counterData = getRemainingTime(endTime);
+
+        daySpan.innerText = ('0'+ counterData.days).slice(-2);
+        hourSpan.innerText = ('0' + counterData.hours).slice(-2);
+        minuteSpan.innerText = ('0' + counterData.minutes).slice(-2);
+        secondSpan.innerText = ('0' + counterData.seconds).slice(-2);
+
+        if (counterData.distance <= 0){
+            clearInterval(timeInterval)
+        }
+    }
+    updateCounter();
+    let timeInterval = setInterval(updateCounter, 1000);
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Would continue to learn more about CSS3 grid and improve my knowledge of algorithms. 
 
 ### Useful resources
 
-https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Countdown Timer](https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/) - This is an amazing aritcle which helped me understand the JS date and time function, I love their functional programming style too.
+- [Negative Border Radius in CSS?](https://stackoverflow.com/questions/45339986/negative-border-radius-in-css/45340988) - This stackoverflow question and answer was useful in helping me figure out the implementation of the curve around the cards.
+- [Mozilla Docs | @font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) - Amazing documentation on MDN web docs to get you started adding custon fonts on your web pages.
+- [How to change the color of an svg element?](https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element) - Helped me figure out how to change the color of svg on hover state.
+- [A useful CSS filter generator](https://codepen.io/sosuke/pen/Pjoqqp) - A cool filter generator program on codepen.io
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [xmaslaunch.netlify.com](https://xmaslaunch.netlify.app/)
+- Frontend Mentor - [@Minard-NG](https://www.frontendmentor.io/profile/Minard-NG)
+- LinkedIn - [Michael Nwankwo](https://www.linkedin.com/in/michael-nwankwo/)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I would really love to appreciate and make a special shout to Jessica Chan, owner of the blog [coder-coder.com](https://coder-coder.com/) and youtube channel [Coder Coder](https://www.youtube.com/c/TheCoderCoder). Her useful contents, got me trying out this chanllenge on frontend mentors. I also really appreciate the amazing team behind frontend mentors, I'd totally recommend their platform to anyone trying to build capacity in frontend programming.
