@@ -30,7 +30,7 @@ Users should be able to:
 - See a live countdown timer that ticks down every second (do a count till christmas day, my tweak though, cause you know christmas is here)
 - **Bonus**: When a number changes, make the card flip from the middle
 
-### Screenshot of my implementation
+### Screenshot of My Implementation
 
 ![Screenshots](./images/screenshot.png)
 
@@ -60,16 +60,28 @@ I have been reading up a couple of articles/books on the importance of semantic 
 <footer> Contains the social media links </footer>
 ```
 
-The laying out of the page's background was an interesting learning process for me. It provided a good use case for me to implement the ::before and ::after CSS pseudo-selector.  I used the ::before to layout the stars svg on the background while the ::after, I used to layout the hills svg on the background. It was really helpful in providing some level of structure without affecting the markup of the document. The background of the page used a linear gradient the flowed between two colors from top to bottom.
+The laying out of the page's background was an interesting learning process for me. It provided a good use case for me to implement the ::before and ::after CSS pseudo-selector.  I used the ::before to layout the stars svg on the background while the ::after, I used to layout the hills svg on the background. It was really helpful in providing some level of structure without affecting the markup of the document. The background of the page used a linear gradient that flowed between two colors from top to bottom.
 
 The entire page was layed out using the CSS3 grid display property. I have just learnt about CSS grid a couple of weeks ago and decided to test it out with this project, I used 3 rows / 1 column template. It did provide a neat control of the page's flow without much media queries. I'm still trying to wrap my heads around some of the custom units it provides such as: fit-content, auto-fill, minmax() etc. and its use-cases. 
 
-Code Snippet for the grid:
+####Code Snippet for the grid:
 ```css
 .grid {
   //other styles
   display: grid;
   grid-template: 0.3fr minmax(6.25rem, 0.2fr) 0.5fr / 1fr;
+}
+```
+
+Using google fonts to add custom fonts for my web projects has been a defacto for me. But I had tried accessing the google fonts website for while developing this project but all the time I tried the site would not open on my device, still researching what the issue is, but in the mean time, I decided to implement the custom 'Red Hat' font used for this project by dowloading it from font squirrel and using the @font-face selector. It provided a good work around but I noticed some lag whenever the page loads when I deployed it. 
+
+####Code Snippet for custom Font:
+```css
+@font-face {
+  font-family: "Red Hat";
+  src: url("/font/red-hat/RedHatDisplay-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
 }
 ```
 
