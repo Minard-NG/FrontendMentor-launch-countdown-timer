@@ -52,6 +52,14 @@ Users should be able to:
 
 ### What I learned
 
+I have been reading up a couple of articles/books on the importance of semantic HTML and the very many benefits it offers, accessibility being one of major benefits. So I try as much to give my HTML structure enough semantic as much as I possibly can, that involves me always asking myself which HTML tag would best semantically convey the importance of every section on the webpage, while ensuring I use alt attributes for images and try to ensure the document flow is in other. I'm probably not yet a 100% complaint but I believe I would keep getting better as I remain more conscious of it. For this project, here is a top-level break down of the semantic layout.
+
+```html
+<header> Contains the page's header message </header>
+<main> All the awesome timer stuff went in here </main>
+<footer> Contains the social media links </footer>
+```
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
