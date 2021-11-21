@@ -73,9 +73,9 @@ The entire page was layed out using the CSS3 grid display property. I have just 
 }
 ```
 
-Using google fonts to add custom fonts for my web projects has been a defacto for me. But I had tried accessing the google fonts website for while developing this project but all the time I tried the site would not open on my device, still researching what the issue is, but in the mean time, I decided to implement the custom 'Red Hat' font used for this project by dowloading it from font squirrel and using the @font-face selector. It provided a good work around but I noticed some lag whenever the page loads when I deployed it. 
+Using google fonts to add custom fonts for my web projects has been a defacto for me. So I had tried accessing the google fonts website to add custom fonts while developing this project, but all the time I tried, the site would not open on my device. Still researching what the issue is, but in the mean time, I decided to implement the custom 'Red Hat' font, used for this project by dowloading it from font squirrel and using the @font-face selector. It provided a good work around but I noticed some lag whenever the page loads when I deployed it. 
 
-#### Code Snippet for custom Font:
+#### Code Snippet for custom font:
 ```css
 @font-face {
   font-family: "Red Hat";
