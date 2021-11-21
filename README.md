@@ -104,7 +104,35 @@ main {
 
 One key concept I experimented while developing this project was the mobile first approach, where I build for smaller devices and implement media queries to enhance the layout/features as for larger devices. I found it very helpful.
 
+The curve on the cards presented an interesting learning opportunity. It caused me to research if the CSS3 had a negative border radius property, which I found it didn't, So I did come up with an interesting work around. I created pseudo-elements for the upper section of each timer card and positioned them relative to the timer cards. Gave them equal width and height plus a border-radius of 50% to make them a circle. Applied a background-color to the pseudo-elements that blends nicely with backgound and then used the top, left, right CSS property to position the circle such that the circle overlaps neatly on the timer card while the other half blends into the background. Also applied a z-index property to give it a nice visual overlapping perspective.
 
+#### Code snippets
+
+```css
+.upper::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: hsl(235, 16%, 14%);
+  border-radius: 50%;
+  position: absolute;
+  top: 46%;
+  left: -2%;
+}
+.upper::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: hsl(235, 16%, 14%);
+  border-radius: 50%;
+  position: absolute;
+  top: 46%;
+  right: -2%;
+  z-index: 99;
+}
+```
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
