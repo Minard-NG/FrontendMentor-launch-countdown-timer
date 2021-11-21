@@ -1,4 +1,4 @@
-# Frontend Mentor - Launch countdown timer - Design Preview
+# Frontend Mentor(Launch countdown timer) - Design Preview
 
 ![Design preview for the Launch countdown timer coding challenge](./design/desktop-preview.jpg)
 
@@ -136,7 +136,7 @@ The curve on the cards presented an interesting learning opportunity. It caused 
 
 Plugging in the Javascript code for the timer was really exciting. I learnt about JS date and time functions, functional programming and closure. I also learnt this little hack where you can use the slice function to easily implement a leading zero for your timer. 
 
-#### Code Snippet for showing closure and slice hack
+#### Code Snippet showing closure and slice hack
 
 ```js
 function initializeTime(endTime){
@@ -172,10 +172,8 @@ Would continue to learn more about CSS3 grid and improve my knowledge of algorit
 
 ## Author
 
-- Website - [xmaslaunch.netlify.com](https://xmaslaunch.netlify.app/)
 - Frontend Mentor - [@Minard-NG](https://www.frontendmentor.io/profile/Minard-NG)
 - LinkedIn - [Michael Nwankwo](https://www.linkedin.com/in/michael-nwankwo/)
-
 
 ## Acknowledgments
 
