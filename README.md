@@ -10,7 +10,7 @@ This is a solution to the [Launch countdown timer challenge on Frontend Mentor](
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot-of-my-implemention)
+  - [Screenshot](#screenshot-of-my-implementation)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
